@@ -20,31 +20,29 @@ const Form = () => {
   };
 
   return (
-    <div className="form-container">
-      <form onSubmit={handleSubmit} className="contact-form">
-        <div className="form-group">
-          <label className="form-label">Nombre completo:</label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="form-input"
-          />
-        </div>
-        <div className="form-group">
-          <label className="form-label">Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="form-input"
-          />
-        </div>
-        <button type="submit" className="form-button">Enviar</button>
-      </form>
+    <form onSubmit={handleSubmit} className="contact-form">
+      <div className="form-group">
+        <label className="form-label">Nombre completo:</label>
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="form-input"
+        />
+      </div>
+      <div className="form-group">
+        <label className="form-label">Email:</label>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="form-input"
+        />
+      </div>
+      <button type="submit" className="form-button">Enviar</button>
       {error && <p className="form-error">{error}</p>}
       {success && <p className="form-success">{success}</p>}
-    </div>
+    </form>
   );
 };
 

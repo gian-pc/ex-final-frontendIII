@@ -6,7 +6,10 @@ const Footer = () => {
   const { state } = useContext(ContextGlobal);
 
   return (
-    <footer className={`footer ${state.theme}`}>
+    <footer className='footer'>
+      <div className="footer-red">
+        VOTAR PARA DH
+      </div>
       <div className="footer-content">
         <div className="footer-left">
           <p>Powered by</p>

@@ -12,15 +12,17 @@ function App() {
   return (
     <ContextProvider>
       <Router>
-        <div className="App">
+        <div className="app-container">
           <Navbar />
-          <Routes>
-            <Route path="/home" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/dentist/:id" element={<Detail />} />
-            <Route path="/favs" element={<Favs />} />
-            <Route path="/" element={<Home />} />
-          </Routes>
+          <div className="content">
+            <Routes>
+              <Route path="/home" element={<Home />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/dentist/:id" element={<Detail />} />
+              <Route path="/favs" element={<Favs />} />
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </div>
           <Footer />
         </div>
       </Router>
